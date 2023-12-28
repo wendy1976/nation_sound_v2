@@ -19,11 +19,11 @@ function Header() {
         {/* Logo Nation Sound */}
         <LinkContainer to="/">
           <Navbar.Brand>
-            <img src={Logo} alt="logo" id="logo" style={{ width: '285px', height: '90px' }} />
+            <img src={Logo} alt="logo" id="logo" style={{ width: '100px', height: '100px' }} />
           </Navbar.Brand>
         </LinkContainer>
         {/* Bouton de bascule de la barre de navigation */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='bgGrey' />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className='bgWhite' />
         {/* Contenu de la barre de navigation */}
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="position-relative">

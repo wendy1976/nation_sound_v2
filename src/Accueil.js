@@ -19,6 +19,19 @@ function Accueil() {
       {/* Header Component */}
       <Header />
 
+      {/* Festival Countdown Component */}
+      <div className="col-12 col-md-4 pe-3 mx-auto">
+        <Card>
+          <Card.Body>
+            <Card.Title className='pink fw-bold'>Compte à rebours du Festival</Card.Title>
+            {/* Intégration du composant FestivalCountdown */}
+            <Suspense fallback={<div>Loading...</div>}>
+              <FestivalCountdown />
+            </Suspense>
+          </Card.Body>
+        </Card>
+        </div>
+
       {/* Carousel Component */}
       <CarouselComponent />
 
@@ -28,6 +41,10 @@ function Accueil() {
           <strong>LA BILLETTERIE</strong>
         </Link>
       </div>
+
+      
+
+
 
       {/* Artists Section */}
       <div className="container">
@@ -86,18 +103,7 @@ function Accueil() {
           </Card>
         </div>
 
-        {/* Festival Countdown Component */}
-        <div className="col-12 col-md-4 pe-3 mx-auto">
-        <Card>
-          <Card.Body>
-            <Card.Title className='pink fw-bold'>Compte à rebours du Festival</Card.Title>
-            {/* Intégration du composant FestivalCountdown */}
-            <Suspense fallback={<div>Loading...</div>}>
-              <FestivalCountdown />
-            </Suspense>
-          </Card.Body>
-        </Card>
-        </div>
+        
       </div>
       {/* Fin de la section */}
       

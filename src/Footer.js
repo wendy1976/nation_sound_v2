@@ -13,7 +13,7 @@ function Footer() {
         <div className="col-12 col-md-4 col-lg-4 mb-3 mb-md-0 d-flex align-items-center justify-content-center">
           <div className="marque pe-5 me-5 text-center">
            
-            <img className="img-fluid" src={logo} alt="Logo Live Events" />
+            <img className="img-fluid" src={logo} alt="Logo Live Events" style={{ width: '100px', height: '100px' }}/>
           </div>
         </div>
 
@@ -37,27 +37,27 @@ function Footer() {
             <div className="d-md-none mb-3">
               <a className="facebook custom-icon-color ms-5 me-2" href="http://www.facebook.com" target="_blank" rel="noopener noreferrer" role="button" id="facebook">
               <span className="visually-hidden">Page Facebook</span>
-                <FaFacebook style={{ fontSize: '30px' }} />
+                <FaFacebook style={{ fontSize: '20px' }} />
               </a>
               <a className="twitter custom-icon-color me-2" href="http://www.twitter.com" target="_blank" rel="noopener noreferrer" role="button" id="twitter">
               <span className="visually-hidden">Page Twitter</span>
-                <FaTwitter style={{ fontSize: '30px' }} />
+                <FaTwitter style={{ fontSize: '20px' }} />
               </a>
               <a className="instagram custom-icon-color me-2" href="http://www.instagram.com" target="_blank" rel="noopener noreferrer" role="button" id="instagram">
               <span className="visually-hidden">Page Instagram</span>
-                <FaInstagram style={{ fontSize: '30px' }} />
+                <FaInstagram style={{ fontSize: '20px' }} />
               </a>
               <a className="youtube custom-icon-color me-2" href="http://www.youtube.com" target="_blank" rel="noopener noreferrer" role="button" id="youtube">
               <span className="visually-hidden">Page Youtube</span>
-                <FaYoutube style={{ fontSize: '30px' }} />
+                <FaYoutube style={{ fontSize: '20px' }} />
               </a>
               <a className="snapchat custom-icon-color me-2 " href="http://www.snapchat.com" target="_blank" rel="noopener noreferrer" role="button" id="snapchat">
               <span className="visually-hidden">Page Snapchat</span>
-                <FaSnapchat style={{ fontSize: '30px' }} />
+                <FaSnapchat style={{ fontSize: '20px' }} />
               </a>
               <a className="linkedin custom-icon-color me-1" href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer" role="button" id="linkedin">
               <span className="visually-hidden">Page Linkedin</span>
-                <FaLinkedin style={{ fontSize: '30px' }} />
+                <FaLinkedin style={{ fontSize: '20px' }} />
               </a>
             </div>
 
@@ -67,15 +67,15 @@ function Footer() {
               <div className="mb-3">
                 <a className="facebook custom-icon-color me-4" href="http://www.facebook.com" target="_blank" rel="noopener noreferrer" role="button" id="facebook2">
                   <span className="visually-hidden">Page Facebook</span>
-                  <FaFacebook style={{ fontSize: '50px' }} />
+                  <FaFacebook style={{ fontSize: '30px' }} />
                 </a>
                 <a className="twitter custom-icon-color me-4" href="http://www.twitter.com" target="_blank" rel="noopener noreferrer" role="button" id="twitter2">
                   <span className="visually-hidden">Page Twitter</span>
-                  <FaTwitter style={{ fontSize: '50px' }} />
+                  <FaTwitter style={{ fontSize: '30px' }} />
                 </a>
                 <a className="instagram custom-icon-color " href="http://www.instagram.com" target="_blank" rel="noopener noreferrer" role="button" id="instagram2">
                   <span className="visually-hidden">Page Instagram</span>
-                  <FaInstagram style={{ fontSize: '50px' }} />
+                  <FaInstagram style={{ fontSize: '30px' }} />
                 </a>
               </div>
 
@@ -83,15 +83,15 @@ function Footer() {
               <div>
                 <a className="youtube custom-icon-color me-4" href="http://www.youtube.com" target="_blank" rel="noopener noreferrer" role="button" id="youtube2">
                 <span className="visually-hidden">Page Youtube</span>
-                  <FaYoutube style={{ fontSize: '50px' }} />
+                  <FaYoutube style={{ fontSize: '30px' }} />
                 </a>
                 <a className="snapchat custom-icon-color me-4 " href="http://www.snapchat.com" target="_blank" rel="noopener noreferrer" role="button" id="snapchat2">
                   <span className="visually-hidden">Page Snapchat</span>
-                  <FaSnapchat style={{ fontSize: '50px' }} />
+                  <FaSnapchat style={{ fontSize: '30px' }} />
                 </a>
                 <a className="linkedin custom-icon-color" href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer" role="button" id="linkedin2">
                   <span className="visually-hidden">Page Linkedin</span>
-                  <FaLinkedin style={{ fontSize: '50px' }} />
+                  <FaLinkedin style={{ fontSize: '30px' }} />
                 </a>
               </div>
             </div>
