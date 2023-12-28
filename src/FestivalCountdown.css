@@ -10,8 +10,8 @@
   .countdown-number {
     font-size: 1.5em;
     font-weight: bold;
-    color: orange; /* Couleur du texte */
-    background-color: black; /* Couleur de fond */
+    color: #FCA311; /* Couleur du texte */
+    background-color: #14213D; /* Couleur de fond */
     padding: 10px;
     border-radius: 8px;
   }

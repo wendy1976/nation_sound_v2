@@ -25,9 +25,7 @@ function Accueil() {
           <Card.Body>
             <Card.Title className='pink fw-bold'>Compte à rebours du Festival</Card.Title>
             {/* Intégration du composant FestivalCountdown */}
-            <Suspense fallback={<div>Loading...</div>}>
               <FestivalCountdown />
-            </Suspense>
           </Card.Body>
         </Card>
         </div>
@@ -41,11 +39,7 @@ function Accueil() {
           <strong>LA BILLETTERIE</strong>
         </Link>
       </div>
-
       
-
-
-
       {/* Artists Section */}
       <div className="container">
         <div className="row">

@@ -98,7 +98,7 @@ function Footer() {
           </div>
         </div>
         <div className="col-12">
-          <p className="text-center small text-muted">©2023 Nation Sound. Tous droits réservés.</p>
+          <p className="text-center small orange">©2023 Nation Sound. Tous droits réservés.</p>
         </div>
       </section>
     </footer>
