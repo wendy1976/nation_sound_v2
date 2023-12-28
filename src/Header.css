@@ -1,0 +1,7 @@
+.nav-item.active h1 {
+    color: #FCA311; /* Couleur du texte lorsque le lien est actif */
+}
+
+.nav-item h1:hover {
+    color: #e5e5e5; /* Couleur du texte lors du survol */
+}
