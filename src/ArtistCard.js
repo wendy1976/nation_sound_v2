@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Modal from 'react-modal';
+import Modal from 'react-modal/lib/components/Modal';
 
 function ArtistCard() {
   const [produits, setProduits] = useState([]);

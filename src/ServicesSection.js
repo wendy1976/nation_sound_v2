@@ -1,9 +1,10 @@
 // Importation des icônes et composants nécessaires depuis les bibliothèques
 import { faCampground, faCocktail, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import { Link } from 'react-router-dom';
 import './ServicesSection.css'; // Importation du fichier de styles ServicesSection.css
 
