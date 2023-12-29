@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './Layout';
+import ScrollToTopButton from './ScrollToTopButton';
 
 const LegalNotice = () => {
   return (
@@ -64,6 +65,8 @@ const LegalNotice = () => {
         Politique de confidentialité : se référer à la page Politique de Confidentialité<br />
         Politique de cookies : se référer à la page Politique des Cookies
       </p>
+      {/* ScrollToTopButton Component */}
+      <ScrollToTopButton />
     </div>
     </Layout>
   );

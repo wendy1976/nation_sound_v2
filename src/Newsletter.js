@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Layout from './Layout';
 import NewsletterForm from './NewsletterForm';
 
+
 function Newsletter() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -55,6 +56,7 @@ function Newsletter() {
             handleSubmit={handleSubmit}
           />
         )}
+        
       </div>
     </Layout>
   );

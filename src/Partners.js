@@ -1,6 +1,7 @@
 import 'animate.css';
 import React from 'react';
 import Layout from './Layout';
+import ScrollToTopButton from './ScrollToTopButton';
 import logoEcoEnergy from './assets/imagesEtLogo/images/logo_ecoEnergy.jpg';
 import logoFacem from './assets/imagesEtLogo/images/logo_facem.jpg';
 import logoFestivalEte from './assets/imagesEtLogo/images/logo_festival_ete.jpg';
@@ -32,6 +33,8 @@ const Partners = () => {
             </div>
           ))}
         </div>
+        {/* ScrollToTopButton Component */}
+      <ScrollToTopButton />
       </div>
     </Layout>
   );

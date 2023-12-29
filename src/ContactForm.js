@@ -1,6 +1,7 @@
 // Importations nécessaires
 import React, { useState } from 'react';
 import Layout from './Layout';
+import ScrollToTopButton from './ScrollToTopButton';
 
 // Composant de formulaire de contact
 function ContactForm() {
@@ -85,6 +86,8 @@ function ContactForm() {
                         <button type="submit">Envoyer</button>
                     </form>
                 )}
+                {/* ScrollToTopButton Component */}
+                <ScrollToTopButton />
             </div>
         </Layout>
     );
