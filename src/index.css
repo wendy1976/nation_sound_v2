@@ -244,12 +244,15 @@ textarea {
 
 button {
   width: auto;
+  height: 30px;
+  line-height: 8px;
   padding: 10px;
   background-color: var(--blue);
   color: var(--white);
   border: none;
-  border-radius: 3px;
+  border-radius: 15px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 button:hover {

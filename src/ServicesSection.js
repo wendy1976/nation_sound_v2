@@ -27,7 +27,9 @@ function ServicesSection() {
               <p>Nous vous proposons sur place, un camping gratuit pour tous les festivaliers les nuits du 21, 22 et 23 Juin 2024! </p>
               {/* Lien vers la section du camping */}
               <Link to="/infos/logement#section2" className="service-button">
-                Voir le camping
+                <button>
+                  Voir le camping
+                </button>
               </Link>
             </div>
           </Col>
@@ -40,7 +42,9 @@ function ServicesSection() {
               <p>Nous vous proposons également plein de points de restauration sur tout le festival, où vous trouverez tout ce qu'il faut pour faire saliver vos papilles!</p>
               {/* Lien vers la section de restauration */}
               <Link to="/infos/restauration-bar#section3" className="service-button">
-                Voir les restaurants
+                <button>
+                  Voir les restaurants
+                </button>
               </Link>
             </div>
           </Col>
@@ -53,7 +57,9 @@ function ServicesSection() {
               <p>Nous vous proposons l'immense bar du festival qui pourra étancher votre soif tout le long du festival, avec un grand choix de boissons!</p>
               {/* Lien vers la section du bar */}
               <Link to="/infos/Restauration&Bar#section3" className="service-button">
-                Voir le bar
+                <button>
+                  Voir le bar
+                </button>
               </Link>
             </div>
           </Col>
