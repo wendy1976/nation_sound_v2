@@ -20,15 +20,17 @@ function Accueil() {
       <Header />
 
       {/* Festival Countdown Component */}
-      <div className="col-12 col-md-4 pe-3 mx-auto">
-        <Card>
-          <Card.Body>
-            <Card.Title className='fw-bold'>Compte à rebours du Festival</Card.Title>
-            {/* Intégration du composant FestivalCountdown */}
-              <FestivalCountdown />
-          </Card.Body>
-        </Card>
-        </div>
+<div className="col-12 d-flex justify-content-center align-items-center">
+  <div className="col-md-4">
+    <Card>
+      <Card.Body>
+        <Card.Title className='fw-bold'>Compte à rebours du Festival</Card.Title>
+        {/* Intégration du composant FestivalCountdown */}
+        <FestivalCountdown />
+      </Card.Body>
+    </Card>
+  </div>
+</div>
 
       {/* Carousel Component */}
       <CarouselComponent />

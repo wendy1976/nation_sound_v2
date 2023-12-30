@@ -248,7 +248,7 @@ button {
   line-height: 8px;
   padding: 10px;
   background-color: var(--blue);
-  color: var(--white);
+  color: var(--orange);
   border: none;
   border-radius: 15px;
   cursor: pointer;
@@ -256,7 +256,8 @@ button {
 }
 
 button:hover {
-  color: var(--orange);
+  color: var(--blue);
+  background-color: var(--orange);
 }
 
 /* Mise en forme de la page des mentions légales */
