@@ -24,7 +24,7 @@ function Header() {
           </Navbar.Brand>
         </LinkContainer>
         {/* Bouton de bascule de la barre de navigation */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='bgWhite' />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className='bgWhite my-auto'style={{ height: '37px' }} />
         {/* Contenu de la barre de navigation */}
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="position-relative">
