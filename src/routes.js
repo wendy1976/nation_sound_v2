@@ -4,6 +4,7 @@ import Billetterie from './Billetterie';
 import Concerts from './Concerts';
 import ContactForm from './ContactForm';
 import Faq from './Faq';
+import FaqPage from './FaqPage';
 import Infos from './Infos';
 import LegalNotice from './LegalNotice';
 import MyMap from './MyMap';
@@ -25,6 +26,7 @@ function AppRoutes() {
       <Route path="/legalNotice" element={<LegalNotice />} />
       <Route path="/billetterie" element={<Billetterie/>} />
       <Route path="/myMap" element={<MyMap />} />
+      <Route path="/faqPage" element={<FaqPage />} />
     
     </Routes>
   );

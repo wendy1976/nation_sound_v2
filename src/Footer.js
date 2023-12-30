@@ -24,7 +24,7 @@ function Footer() {
           <ul style={{ listStyleType: 'none', padding: 0 }}>
             <li><Link to="/contactForm" className="text-white link-hover">Contact</Link></li>
             <li><Link to="/newsletter" className="text-white link-hover">Newsletter</Link></li>
-            <li><Link to="/faq" className="text-white link-hover">Faq</Link></li>
+            <li><Link to="/faqPage" className="text-white link-hover">Faq</Link></li>
             <li><Link to="/legalNotice" className="text-white link-hover">Mentions Légales</Link></li>
           </ul>
           </div>

@@ -143,36 +143,23 @@ body {
   background-color: #E6E16D;
 }
 
-/* Mise en forme de la section transport */
-.myButton {
-  background-color: #64be8b;
-}
 
-.myButton:hover {
-  background-color: #E6E16D;
-}
 
-/* Style du trait rose sous mes images */
-.pinkSeparator {
-  height: 3px;
-  width: 70%;
-  background-color: #D93DA5;
-  margin: 20px auto;
-}
+
 
 /* Mise en forme de la FAQ */
 .faq-item {
   max-width: 70%;
   margin: 0 auto;
-  box-shadow: 0 4px 8px #E6E16D;
+  box-shadow: 0 4px 8px var(--orange);
   padding: 10px;
   margin-bottom: 20px;
 }
 
 .faq-question {
-  background-color: #64be8b;
+  background-color: var(--blue);
   font-size: 1.1em !important;
-  color: #D93DA5;
+  color: var(--orange);
   width: 85%;
   margin: 0 auto;
   padding: 10px;
@@ -182,7 +169,8 @@ body {
 }
 
 .faq-question:hover {
-  background-color: #E6E16D;
+  background-color: var(--orange);
+  color: var(--blue);
 }
 
 .faq-answer {

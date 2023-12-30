@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 // Importation des composants nécessaires
-import Faq from './Faq';
 import Layout from './Layout';
 import ScrollToTopButton from './ScrollToTopButton';
 
@@ -23,7 +22,7 @@ function Infos() {
             {/* Présentation de la page */}
             <div className='text-center bgWhite'>
                 <div className="container">
-                    <h1 className="text-center border-bottom border-2 mb-0 mt-0 pt-5 pb-2">Informations pratiques et FAQ</h1>
+                    <h1 className="text-center border-bottom border-2 mb-0 mt-0 pt-5 pb-2">Informations pratiques</h1>
                     <div className="row mt-3 mx-5">
                         {/* Colonne avec l'image à droite (md et lg) */}
                         <div className="col-md-6 col-lg-6 mt-2">
@@ -42,7 +41,6 @@ function Infos() {
                                 <li><a href="#section3">Restauration & Bar</a></li>
                                 <li><a href="#section4">Accessibilité</a></li>
                                 <li><a href="#section5">Infos vente</a></li>
-                                <li><a href="#section6">FAQ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -304,14 +302,7 @@ function Infos() {
                     </div>
                 </div>
             </section>
-
-            {/* Section FAQ */}
-            <section className='text-center bgWhite' id="section6">
-                <h2 className='text-center border-bottom border-2 mb-3 mt-0 pt-5 pb-2'>FAQ</h2>
-                <Faq /> {/* Intégrez votre composant FAQ ici */}
-            </section>
-
-            {/* Ajoutez le bouton de retour en haut de la page */}
+                {/* Ajoutez le bouton de retour en haut de la page */}
                 <ScrollToTopButton />
         </Layout>
     );
