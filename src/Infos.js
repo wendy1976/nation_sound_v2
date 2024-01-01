@@ -9,7 +9,7 @@ import ScrollToTopButton from './ScrollToTopButton';
 // Importation des images
 import InfosImage from './assets/imagesEtLogo/images/Infos.jpg';
 import accessibiliteImage from './assets/imagesEtLogo/images/accessibilite.jpg';
-import barImage from './assets/imagesEtLogo/images/bar.jpg';
+import barImage from './assets/imagesEtLogo/images/bar.webp';
 import campingImage from './assets/imagesEtLogo/images/camping.jpg';
 import hotelImage from './assets/imagesEtLogo/images/hotel.jpg';
 import restaurationImage from './assets/imagesEtLogo/images/restauration.jpg';
@@ -29,7 +29,7 @@ function Infos() {
                             <img
                                 src={InfosImage}
                                 alt="présentation de la page infos"
-                                style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '0 auto' }}
+                                style={{ maxWidth: '80%', height: 'auto', display: 'block', margin: '0 auto' }}
                             />
                         </div>
                         {/* Colonne avec le texte à gauche (md et lg) */}
@@ -53,7 +53,7 @@ function Infos() {
                     <h2 className='text-center border-bottom border-2 mb-0 mt-0 pt-5 pb-2'>Transport</h2>
                     <div className="row">
                         {/* Colonne avec le texte à gauche (md et lg) */}
-                        <div className="col-md-6 col-lg-6 text-start mt-0">
+                        <div className="col-md-6 col-lg-6 text-start mt-0 order-2 order-md-1">
                             <div className="mx-md-5">
                                 {/* Sous-section En train */}
                                 <h4 className='mt-5'>
@@ -68,7 +68,7 @@ function Infos() {
                             </div>
                             {/* Sous-section En bus */}
                             <div className="mx-md-5">
-                                <h4 className='pink mt-3'>
+                                <h4 className='mt-3'>
                                     <FontAwesomeIcon icon={faBus} className="mr-3 animate__animated animate__pulse animate__slow	2s animate__infinite	infinite" /> En bus
                                 </h4>
                                 <p>
@@ -80,7 +80,7 @@ function Infos() {
                             </div>
                             {/* Sous-section En voiture */}
                             <div className="mx-md-5">
-                                <h4 className='pink mt-3'>
+                                <h4 className='mt-3'>
                                     <FontAwesomeIcon icon={faCar} className="mr-3 animate__animated animate__pulse animate__slow	2s animate__infinite	infinite" /> En voiture
                                 </h4>
                                 <p>
@@ -90,9 +90,17 @@ function Infos() {
                                     <button>En voiture &#10132;</button>
                                 </a>
                             </div>
+                        </div>
+                        {/* Colonne avec l'image à droite (md et lg) */}
+                        <div className="col-md-6 col-lg-6 mt-4 order-1 order-md-2">
+                            <img
+                                src={transportImage}
+                                alt="Transport"
+                                style={{ display: 'block', margin: '0 auto', maxWidth: '80%', height: 'auto' }}
+                            />
                             {/* Sous-section Les parkings à proximité */}
-                            <div className="mx-md-5">
-                                <h4 className='pink mt-3'>
+                            <div className="mx-md-5 text-start">
+                                <h4 className='mt-5'>
                                     <FontAwesomeIcon icon={faParking} className="mr-3 animate__animated animate__pulse animate__slow	2s animate__infinite	infinite" /> Les parkings à proximité
                                 </h4>
                                 <p>
@@ -102,14 +110,6 @@ function Infos() {
                                     <button>Les parkings &#10132;</button>
                                 </a>
                             </div>
-                        </div>
-                        {/* Colonne avec l'image à droite (md et lg) */}
-                        <div className="col-md-6 col-lg-6 mt-4">
-                            <img
-                                src={transportImage}
-                                alt="Transport"
-                                style={{ display: 'block', margin: '0 auto', maxWidth: '70%', height: 'auto' }}
-                            />
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ function Infos() {
                             <img
                                 src={campingImage}
                                 alt="Camping"
-                                style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '0 auto' }}
+                                style={{ maxWidth: '80%', height: 'auto', display: 'block', margin: '0 auto' }}
                             />
                         </div>
                         {/* Colonne avec le texte sur le camping à gauche (md et lg) */}
@@ -151,13 +151,13 @@ function Infos() {
                 <div className="container mt-5">
                     <div className="row">
                         {/* Colonne avec l'image des hôtels à gauche (md et lg) */}
-                        <div className="col-md-6 col-lg-6 text-start">
+                        <div className="col-md-6 col-lg-6 text-start order-2 order-md-1">
                             {/* Sous-section Les hôtels aux alentours */}
                             <h3 className='mt-5'>
                                 <FontAwesomeIcon icon={faHotel} className="mr-3" /> Les hôtels aux alentours
                             </h3>
                             <p>Si vous préférez un certain confort, nous vous proposons une liste d’hôtels aux alentours du festival:</p>
-                            <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <ul style={{ listStyle: 'none', padding: 0, fontWeight: 'bold' }}>
                                 <li>HOTEL IBIS</li>
                                 <li>B&B HOTEL</li>
                                 <li>HOTEL CAMPANILE</li>
@@ -166,34 +166,33 @@ function Infos() {
                             </ul>
                         </div>
                         {/* Colonne avec l'image de l'hôtel à droite (md et lg) */}
-                        <div className="col-md-6 col-lg-6 mt-4">
+                        <div className="col-md-6 col-lg-6 mt-4 order-1 order-md-2">
                             <img
                                 src={hotelImage}
                                 alt="Hôtel"
-                                style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '0 auto' }}
+                                style={{ maxWidth: '80%', height: 'auto', display: 'block', margin: '0 auto' }}
                             />
                         </div>
                     </div>
                 </div>
             </section>
-            
-            {/* Section Restauration & Bar */}
+            {/* Section Restauration et Bar */}
             <section className='text-center bgWhite' id="section3">
                 <div className="container">
                     <h2 className='text-center border-bottom border-2 mb-0 mt-0 pt-5 pb-2'>
-                    Restauration et Bar
+                        Restauration et Bar
                     </h2>
                     <div className="row">
-                    {/* Colonne avec l'image des restaurants à gauche (md et lg) */}
+                        {/* Colonne avec l'image des restaurants à gauche (md et lg) */}
                         <div className="col-md-6 col-lg-6 mt-4">
                             {/* Sous-section Les restaurants */}
                             <img
                                 src={restaurationImage}
                                 alt="Restauration"
-                                style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '0 auto' }}
+                                style={{ maxWidth: '80%', height: 'auto', display: 'block', margin: '0 auto' }}
                             />
                         </div>
-                    {/* Colonne avec le texte sur les restaurants à droite (md et lg) */}
+                        {/* Colonne avec le texte sur les restaurants à droite (md et lg) */}
                         <div className="col-md-6 col-lg-6 text-start">
                             <div className='mx-md-5'>
                                 <h3 className='mt-5'>
@@ -202,8 +201,17 @@ function Infos() {
                                 <p>Le festival vous propose une sélection de restaurants pour vous restaurer entre deux concerts:</p>
                                 <h4 className='mt-5'>Foodtruck : « La Charrette de papy »</h4>
                                 <p>Dans une ambiance très conviviale, « La Charrette de papy » vous propose une large carte de sandwichs, des hamburgers, des pizzas, des frites, des boissons et des desserts.</p>
-                                <h4 className='mt-5'>Restauration du monde: « L’Epicurium »</h4>
+                            </div>
+                        </div>
+                        {/* Nouvelle rangée pour les deux derniers paragraphes */}
+                        <div className="row">
+                            {/* Colonne pour le paragraphe "Restauration du monde" */}
+                            <div className="col-md-6 col-lg-6 text-start">
+                                <h4 className='mt-5 pe-3'>Restauration du monde: « L’Epicurium »</h4>
                                 <p>« L’Epicurium » vous propose une très grande diversité de cuisine du monde: asiatique (sushis, nems, brochettes, rouleaux de printemps entre autres), végétarienne (salades, pokébowl…), espagnole (tapas, paella…).</p>
+                            </div>
+                            {/* Colonne pour le paragraphe "Restauration du terroir" */}
+                            <div className="col-md-6 col-lg-6 text-start">
                                 <h4 className='mt-5'>Restauration du terroir: « La cuisine des bichettes »</h4>
                                 <p>Dans une ambiance chaleureuse, « La cuisine des bichettes », vous propose une très grande variété de plats traditionnels (poulet basquaise, choucroute…), de planchettes (fromages, charcuterie), des huîtres, de la mouclade et autres fruits de mer, de salades, de quiches, et de crêpes (galettes bretonnes), et de succulents desserts (profiteroles, tartes, glaces, crème brûlée…)</p>
                             </div>
@@ -211,27 +219,28 @@ function Infos() {
                     </div>
                 </div>
 
-                        {/* Nouvelle rangée pour la deuxième section */}
-                        <div className="container mt-5">
-                            <div className="row">
-                            {/* Colonne avec le texte sur le bar à gauche (md et lg) */}
-                                <div className="col-md-6 col-lg-6 text-start">
-                                {/* Sous-section Le bar du festival */}
-                                <h3 className='mt-5'>
-                                    <FontAwesomeIcon icon={faGlassCheers} className="mr-3" /> Le bar du festival
-                                </h3>
+                {/* Nouvelle rangée pour la deuxième section */}
+                <div className="container mt-5">
+                    <div className="row">
+                    {/* Colonne avec le texte sur le bar à gauche (md et lg) */}
+                        <div className="col-md-6 col-lg-6 text-start">
+                        {/* Sous-section Le bar du festival */}
+                            <h3 className='mt-5'>
+                                <FontAwesomeIcon icon={faGlassCheers} className="mr-3" /> Le bar du festival
+                            </h3>
+                            <p>Le festival vous propose un bar pour vous désaltérer entre deux concerts,vous y trouverez un grand choix de bières et de cocktails, ainsi que de nombreuses boissons non-alcoolisées! </p>
                         </div>
 
-                            {/* Colonne avec l'image à droite (md et lg) */}
-                                <div className="col-md-6 col-lg-6 mt-3 mb-3">
-                                    <img
-                                        src={barImage}
-                                        alt="Bar Nation Sounds"
-                                        style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '0 auto' }}
-                                    />
-                                </div>
-                            </div>
+                        {/* Colonne avec l'image à droite (md et lg) */}
+                        <div className="col-md-6 col-lg-6 mt-3 mb-3">
+                            <img
+                                src={barImage}
+                                alt="Bar Nation Sounds"
+                                style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '0 auto' }}
+                            />
                         </div>
+                    </div>
+                </div>
             </section>
 
             {/* Section Accessibilité */}
@@ -244,16 +253,16 @@ function Infos() {
                             <img
                                 src={accessibiliteImage}
                                 alt="Accessibilité"
-                                style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '0 auto' }}
+                                style={{ maxWidth: '80%', height: 'auto', display: 'block', margin: '0 auto' }}
                             />
                         </div>
                         {/* Colonne avec le texte sur l'accessibilité à gauche (md et lg) */}
                         <div className="col-md-6 col-lg-6 text-start">
                             <div className='mx-md-5'>
                                 <div className='d-flex justify-content-center align-items-center mt-3'>
-                                    <FontAwesomeIcon icon={faExclamationCircle} style={{ fontSize: '3em' }} />
+                                    <FontAwesomeIcon icon={faExclamationCircle} style={{ fontSize: '2em' }} />
                                 </div>
-                                <h3 className='mt-5'>Signalez vous avant d’acheter vos billets!</h3>
+                                <h3 className='mt-3'>Signalez vous avant d’acheter vos billets!</h3>
                                 <p>Le festival cherche à améliorer l’accueil des Personnes en Situation de Handicap. Des solutions vous sont proposées pour rendre le festival accessible à tous.</p>
                                 <p>Seules les personnes possédant <strong>UN JUSTIFICATIF DE HANDICAP</strong><em> (Carte d’invalidité, Carte priorité pour personne handicapée, Carte européenne de stationnement, Carte mobilité inclusion…)</em> pourront accéder à l’entrée et aux places dédiées après bien sûr avoir été enregistrées.
                                 <strong> A NOTER !</strong> Pour des raisons de sécurité et de confort, le nombre de places est limité au niveau des plateformes et des places assises. Une fois la capacité d’accueil maximum atteinte, nous ne pourrons donc pas répondre favorablement aux nouvelles inscriptions.</p>
@@ -269,34 +278,34 @@ function Infos() {
                 <h2 className='text-center border-bottom border-2 mb-0 mt-0 pt-5 pb-2'>Infos vente</h2>
                     <div className="row">
                     {/* Colonne avec le texte sur les infos de vente à gauche (md et lg) */}
-                        <div className="col-md-6 col-lg-6 text-start">
+                        <div className="col-md-6 col-lg-6 text-start order-2 order-md-1">
                             <div>
                                 <div className='d-flex justify-content-center align-items-center mt-3'>
                                     <FontAwesomeIcon
                                         icon={faLaptop}
                                         className='mr-3'
-                                        style={{ fontSize: '3em' }}
+                                        style={{ fontSize: '2em' }}
                                     />
                                 </div>
-                                <h3 className='mt-2 h4'>En ligne</h3>
+                                <h3 className='mt-2'>En ligne</h3>
                                 <p>Pour acheter votre billet, rendez-vous sur notre BILLETTERIE EN LIGNE</p>
                                     <div className='d-flex justify-content-center align-items-center'>
                                         <FontAwesomeIcon
                                         icon={faStore}
                                         className='mr-3'
-                                        style={{ fontSize: '3em' }}
+                                        style={{ fontSize: '2em' }}
                                         />
                                     </div>
-                                <h3 className='h4 mt-2'>En magasin</h3>
+                                <h3 className='mt-2'>En magasin</h3>
                                 <p>Liste des points de vente: Fmac, Leplerc, Ochamps, Culturo, Carrif</p>
                             </div>
                         </div>
                     {/* Colonne avec l'image des tickets à droite (md et lg) */}
-                        <div className="col-md-6 col-lg-6 mt-3 mb-3">
+                        <div className="col-md-6 col-lg-6 mt-3 mb-3 order-1 order-md-2">
                             <img
                                 src={ticketImage}
                                 alt="Ticket"
-                                style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '0 auto' }}
+                                style={{ maxWidth: '80%', height: 'auto', display: 'block', margin: '0 auto' }}
                             />
                         </div>
                     </div>
