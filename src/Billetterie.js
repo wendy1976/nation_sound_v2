@@ -178,16 +178,16 @@ const Billetterie = () => {
           <div className="overlay" onClick={fermerPanier}></div>
           <div className="panier">
             {panierValide ? (
-              <h2 className='pink'>Votre panier a bien été validé!</h2>
+              <h2 className=''>Votre panier a bien été validé!</h2>
             ) : (
               <>
-                <h2 className='pink'>🧺 Panier</h2>
+                <h2 className=''>🧺 Panier</h2>
                 <ul>
                   {Object.values(panier).map((item) => (
                     item.quantite > 0 && (
                       <li key={item.id}>
                         {item.name} - Quantité: {item.quantite} - Prix: {item.price * item.quantite} € TTC
-                        <button className="btn btn-sm mr-2 pink fw-bold" onClick={() => supprimerDuPanier(item)}>Supprimer</button>
+                        <button className="btn btn-sm mr-2 fw-bold" onClick={() => supprimerDuPanier(item)}>Supprimer</button>
                       </li>
                     )
                   ))}
@@ -208,22 +208,24 @@ const Billetterie = () => {
         </div>
       )}
 
-      <div className="container">
-        <h1 className="text-center pink mb-0 mt-3 pt-0 pb-5">Billetterie</h1>
-        <p className="text-center pink mb-0 mt-3 pt-0 pb-5">Pour information, ce site étant fictif, vous n'avez pas d'options de paiement, vous validez votre panier, et votre billet de concert se télécharge automatiquement.</p>
-        {passes.map((pass) => (
-          <div key={pass.id} className="row border mb-4 p-3 bgYellow">
-            <div className="col-md-3">
-              <img src={Image} alt="" className="img-fluid animate__animated animate__swing animate__slow	2s animate__repeat-3" />
+<div className="container">
+    <h1 className="text-center pink mb-0 mt-3 pt-0 pb-5">Billetterie</h1>
+    <p className="text-center pink mb-0 mt-3 pt-0 pb-5">Pour information, ce site étant fictif, vous n'avez pas d'options de paiement, vous validez votre panier, et votre billet de concert se télécharge automatiquement.</p>
+    <div className="row">
+    {passes.map((pass) => (
+        <div key={pass.id} className="col-md-4 border mb-4 p-3 d-flex flex-column">
+            <div>
+                <img src={Image} alt="pass" className="img-fluid" style={{ maxWidth: '85%', height: 'auto', display: 'block', margin: '0 auto' }}/>
+                <h3 className='ms-4'>{pass.name}</h3>
+                <p className="me-2 ms-4" dangerouslySetInnerHTML={{ __html: pass.description }}></p>
+                <p className='ms-4'>Prix: {pass.price} €</p>
             </div>
-            <div className="col-md-9">
-              <h3 className='pink'>{pass.name}</h3>
-              <p dangerouslySetInnerHTML={{ __html: pass.description }}></p>
-              <p>Prix: {pass.price} €</p>
-              <button onClick={() => ajouterAuPanier(pass)}>Ajouter au panier</button>
+            <div className="mt-auto">
+                <button className="mb-2 my-2 ms-4" onClick={() => ajouterAuPanier(pass)}>Ajouter au panier</button>
             </div>
-          </div>
-        ))}
+        </div>
+    ))}
+</div>
         {/* ScrollToTopButton Component */}
       <ScrollToTopButton />
       </div>
