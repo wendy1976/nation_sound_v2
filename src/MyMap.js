@@ -111,7 +111,7 @@ const MyMap = () => {
       </div>
       <div className="pt-5">
         {isDesktopOrLaptop && (
-          <div className="mb-3 mt-5"style={{ display: 'flex', gap: '10px' }}>
+          <div className="mb-5 mt-5"style={{ display: 'flex', gap: '10px' }}>
             <button className="d-flex align-items-center" onClick={() => handleCategoryFilter('Scène')}>
               <span style={{ display: 'flex', alignItems: 'center' }}>
                 <img src={sceneIcon} alt="Scène" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
@@ -159,7 +159,7 @@ const MyMap = () => {
               {/* Conteneur de sélection de catégorie */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {/* Sélecteur de catégorie */}
-                <select className="form-select bgPink white" onChange={(e) => handleCategoryFilter(e.target.value)}>
+                <select className="form-select" onChange={(e) => handleCategoryFilter(e.target.value)}>
                   <option value="">Sélectionner une catégorie</option>
                   <option value="Scène">Scènes</option>
                   <option value="Restaurant">Restaurants</option>
@@ -169,7 +169,7 @@ const MyMap = () => {
                 </select>
                 {/* Bouton pour réinitialiser le filtre */}
                 <div>
-                  <button className="btn bgPink white d-inline-block" onClick={resetFilter}>
+                  <button className="btn d-inline-block" onClick={resetFilter}>
                     Réinitialiser le filtre
                   </button>
                 </div>
@@ -178,7 +178,7 @@ const MyMap = () => {
           )}
 
           {/* Carte avec les marqueurs et popups */}
-          <MapContainer center={cascadeCoordinates} zoom={15} style={{ height: '500px', width: '100%' }} whenCreated={(mapInstance) => (mapRef.current = mapInstance)}>
+          <MapContainer center={cascadeCoordinates} zoom={15} style={{ height: '800px', width: '100%' }} whenCreated={(mapInstance) => (mapRef.current = mapInstance)}>
             {/* Couche de tuiles OpenStreetMap */}
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' />
 
