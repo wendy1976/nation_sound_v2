@@ -27,7 +27,7 @@ function ServicesSection() {
               <h3>Camping gratuit</h3>
               <p>Nous vous proposons sur place, un camping gratuit pour tous les festivaliers les nuits du 21, 22 et 23 Juin 2024! </p>
               {/* Lien vers la section du camping */}
-              <Link to="/infos/logement#section2" className="service-button">
+              <Link to="/infos#section2" className="service-button">
                 <button>
                   Voir le camping
                 </button>

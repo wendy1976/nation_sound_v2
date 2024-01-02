@@ -1,6 +1,8 @@
 import { faBus, faCampground, faCar, faExclamationCircle, faGlassCheers, faHotel, faLaptop, faParking, faStore, faTrain, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 // Importation des composants nécessaires
 import Layout from './Layout';
@@ -17,6 +19,18 @@ import ticketImage from './assets/imagesEtLogo/images/ticket.jpg';
 import transportImage from './assets/imagesEtLogo/images/transport.jpg';
 
 function Infos() {
+    const location = useLocation();
+
+  useEffect(() => {
+    const anchorId = location.hash.substring(1);
+    if (anchorId) {
+      const anchorElement = document.getElementById(anchorId);
+      if (anchorElement) {
+        anchorElement.scrollIntoView();
+      }
+    }
+  }, [location]);
+   
     return (
         <Layout>
             {/* Présentation de la page */}

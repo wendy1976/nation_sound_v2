@@ -54,7 +54,7 @@ function Header() {
             </Nav.Item>
             {/* Lien vers la page Infos pratiques */}
             <Nav.Item className={isActive('/infos') ? 'active' : ''}>
-              <LinkContainer to="/infos">
+              <LinkContainer to="/infos/*">
                 <Nav.Link>
                   <h1 className="h6 mt-3 white" style={{ fontWeight: 600 }}>Informations pratiques</h1>
                 </Nav.Link>
