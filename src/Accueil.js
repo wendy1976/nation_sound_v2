@@ -20,7 +20,7 @@ function Accueil() {
       <Header />
 
       {/* Festival Countdown Component */}
-<div className="col-12 d-flex justify-content-center align-items-center">
+<div className="col-12 d-flex justify-content-center align-items-center mt-5 pt-5">
   <div className="col-md-4">
     <Card>
       <Card.Body>

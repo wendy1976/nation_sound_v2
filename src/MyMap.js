@@ -3,7 +3,8 @@ import 'leaflet/dist/leaflet.css';
 import React, { useRef, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useMediaQuery } from 'react-responsive';
-import { Link } from 'react-router-dom';
+import Header from './Header';
+
 
 // Import des images et icônes
 import barImage from './assets/imagesEtLogo/images/bar1.png';
@@ -103,15 +104,14 @@ const MyMap = () => {
 
   
   return (
+   
     <>
-      <div className="go-to-home-button">
-        <Link to="/" className="link-style">
-          Retour à l'accueil
-        </Link>
+      <div className="pb-5">
+      <Header />
       </div>
-      <div className="">
+      <div className="pt-5">
         {isDesktopOrLaptop && (
-          <div style={{ display: 'flex', gap: '10px' }}>
+          <div className="mb-3 mt-5"style={{ display: 'flex', gap: '10px' }}>
             <button className="d-flex align-items-center" onClick={() => handleCategoryFilter('Scène')}>
               <span style={{ display: 'flex', alignItems: 'center' }}>
                 <img src={sceneIcon} alt="Scène" style={{ width: '30px', height: '30px', marginRight: '5px' }} />

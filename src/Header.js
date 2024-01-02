@@ -16,11 +16,11 @@ function Header() {
   return (
     <div>
       {/* Barre de navigation */}
-      <Navbar className="bgBlue px-5" expand="lg" id="navbar">
+      <Navbar className="bgBlue px-5 " expand="lg" id="navbar" fixed="top">
         {/* Logo Nation Sound */}
         <LinkContainer to="/">
           <Navbar.Brand>
-            <img src={Logo} alt="logo" id="logo" style={{ width: '100px', height: '100px' }} />
+            <img src={Logo} alt="logo" id="logo" style={{ width: '75px', height: '75px' }} />
           </Navbar.Brand>
         </LinkContainer>
         {/* Bouton de bascule de la barre de navigation */}
