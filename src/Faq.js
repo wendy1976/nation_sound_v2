@@ -6,15 +6,15 @@ function Faq() {
     const [faqs, setFaqs] = useState([
         {
             question: 'Où dormir ?',
-            answer: 'Nous vous proposons de planter votre tente sur le Camping du Festival, ou de loger dans les hôtels aux alentours, toutes les informations sont sur notre rubrique : <a href="#section2">Logement</a>.'
+            answer: 'Nous vous proposons de planter votre tente sur le Camping du Festival, ou de loger dans les hôtels aux alentours, toutes les informations sont sur notre rubrique : <a href="infos#section2">Logement</a>.'
         },
         {
             question: 'Comment venir ?',
-            answer: 'Toutes les informations concernant les transports se trouvent dans la rubrique : <a href="#section1">Transport</a>.'
+            answer: 'Toutes les informations concernant les transports se trouvent dans la rubrique : <a href="infos#section1">Transport</a>.'
         },
         {
             question: 'Où manger ?',
-            answer: 'Nous vous proposons au sein du festival plusieurs points de restauration, que vous trouverez dans notre rubrique : <a href="#section3">Restauration</a>.'
+            answer: 'Nous vous proposons au sein du festival plusieurs points de restauration, que vous trouverez dans notre rubrique : <a href="infos#section3">Restauration</a>.'
         },
         {
             question: 'Comment payer dans l’enceinte du festival ?',
@@ -71,7 +71,7 @@ function Faq() {
     };
 
     return (
-        <div className="faq-section">
+        <div className="faq-section mt-5 pt-3 pb-3">
             {faqs.map((faq, index) => (
                 <div key={index} className="faq-item">
                     <h2 onClick={() => toggleAnswer(index)} className="faq-question">

@@ -55,7 +55,7 @@ function NewsletterForm({ formData, handleInputChange, handleSubmit }) {
         </label>
       </div>
       {/* Bouton d'envoi du formulaire */}
-      <button type="submit">S'abonner</button>
+      <button className="mx-auto d-block"type="submit">S'abonner</button>
     </form>
   );
 }

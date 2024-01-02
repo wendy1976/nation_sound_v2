@@ -44,8 +44,8 @@ function Newsletter() {
 
   return (
     <Layout>
-      <div>
-        <h1 className="text-center mb-4 pink">Inscription à la newsletter</h1>
+      <div className='mt-5 pt-5'>
+        <h1 className="text-center mt-5 mb-5">Inscription à la newsletter</h1>
         {/* Afficher un message de confirmation si l'utilisateur s'est abonné */}
         {subscribed ? (
           <p className='text-center'>Merci de vous être abonné à notre newsletter!</p>

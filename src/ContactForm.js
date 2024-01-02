@@ -49,8 +49,10 @@ function ContactForm() {
     // Rendu du composant
     return (
         <Layout>
-            <h1 className="text-center mb-4 pink">Formulaire de contact</h1>
-            <div className="contact-form-container">
+            <div className="mt-5 pt-5">
+            <h1 className="text-center blue mt-5">Formulaire de contact</h1>
+            </div>
+            <div className="contact-form-container pb-5 pt-5 mt-5 mb-3">
                 {/* Afficher un message de remerciement si le formulaire a été soumis */}
                 {formSubmitted ? (
                     <p>Merci pour votre message! Nous vous répondrons dès que possible.</p>
