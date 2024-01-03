@@ -57,6 +57,9 @@ const Billetterie = () => {
     setTimeout(() => {
       setMessage('');
     }, 5000);
+
+    // Ouvrir le panier
+    setAfficherPanier(true);
   };
 
   // Fonction pour afficher ou masquer le panier
@@ -164,24 +167,24 @@ const Billetterie = () => {
 
   return (
     <Layout>
-      <div className="navbar">
-        <button className="panier-button" onClick={togglePanier}>
+      <div className="navbar mt-5 pt-5">
+        <button className="panier-button mt-5 me-3" onClick={togglePanier}>
           <FontAwesomeIcon icon={faShoppingCart} /> Panier
-            {calculerNombreArticles() > 0 && (
-          <span className="badge">{calculerNombreArticles()}</span>
+          {calculerNombreArticles() > 0 && (
+            <span className="badge">{calculerNombreArticles()}</span>
           )}
         </button>
       </div>
 
       {afficherPanier && (
-        <div>
-          <div className="overlay" onClick={fermerPanier}></div>
-          <div className="panier">
+        <div className='panier me-3'>
+          <div className="overlay mt-5" onClick={fermerPanier}></div>
+          <div className="">
             {panierValide ? (
-              <h2 className=''>Votre panier a bien été validé!</h2>
+              <h2 className='pt-5 h4 coral'>Votre panier a bien été validé!</h2>
             ) : (
               <>
-                <h2 className=''>🧺 Panier</h2>
+                <h2 className='mt-5 pt-5'>🧺 Panier</h2>
                 <ul>
                   {Object.values(panier).map((item) => (
                     item.quantite > 0 && (
@@ -193,9 +196,9 @@ const Billetterie = () => {
                   ))}
                 </ul>
                 <p className='fw-bold'>Total: {calculerTotal()} € TTC</p>
-                <button className="btn btn-sm mr-2 pink fw-bold" onClick={reinitialiserPanier}>Réinitialiser le panier</button>
-                <button className="btn btn-sm mr-2 pink fw-bold" onClick={fermerPanier}>Fermer le panier</button>
-                <button className="btn btn-sm pink fw-bold" onClick={validerPanier}>Valider le panier</button>
+                <button className="btn btn-sm mr-2 fw-bold" onClick={reinitialiserPanier}>Réinitialiser le panier</button>
+                <button className="btn btn-sm mr-2 fw-bold" onClick={fermerPanier}>Fermer le panier</button>
+                <button className="btn btn-sm fw-bold" onClick={validerPanier}>Valider le panier</button>
               </>
             )}
           </div>
@@ -204,34 +207,35 @@ const Billetterie = () => {
 
       {message && (
         <div className="popup">
-          <p className='pink'>{message}</p>
+          <p className='coral'>{message}</p>
         </div>
       )}
 
-<div className="container">
-    <h1 className="text-center pink mb-0 mt-3 pt-0 pb-5">Billetterie</h1>
-    <p className="text-center pink mb-0 mt-3 pt-0 pb-5">Pour information, ce site étant fictif, vous n'avez pas d'options de paiement, vous validez votre panier, et votre billet de concert se télécharge automatiquement.</p>
-    <div className="row">
-    {passes.map((pass) => (
-        <div key={pass.id} className="col-md-4 border mb-4 p-3 d-flex flex-column">
-            <div>
+      <div className="container">
+        <h1 className="text-center mb-0 mt-3 pt-0 pb-5">Billetterie</h1>
+        <p className="text-center mb-0 mt-3 pt-0 pb-5">Pour information, ce site étant fictif, vous n'avez pas d'options de paiement, vous validez votre panier, et votre billet de concert se télécharge automatiquement.</p>
+        <div className="row">
+          {passes.map((pass) => (
+            <div key={pass.id} className="col-md-3 bgWhite border mb-4 p-3 d-flex flex-column">
+              <div>
                 <img src={Image} alt="pass" className="img-fluid" style={{ maxWidth: '85%', height: 'auto', display: 'block', margin: '0 auto' }}/>
                 <h3 className='ms-4'>{pass.name}</h3>
                 <p className="me-2 ms-4" dangerouslySetInnerHTML={{ __html: pass.description }}></p>
                 <p className='ms-4'>Prix: {pass.price} €</p>
-            </div>
-            <div className="mt-auto">
+              </div>
+              <div className="mt-auto">
                 <button className="mb-2 my-2 ms-4" onClick={() => ajouterAuPanier(pass)}>Ajouter au panier</button>
+              </div>
             </div>
+          ))}
         </div>
-    ))}
-</div>
         {/* ScrollToTopButton Component */}
-      <ScrollToTopButton />
+        <ScrollToTopButton />
       </div>
     </Layout>
   );
 };
 
 export default Billetterie;
+
  

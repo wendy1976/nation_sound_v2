@@ -1,11 +1,13 @@
+/* Taille par défaut pour les écrans larges */
 .carousel img {
-    width: 100%;
-    height: auto;
+  width: 1920px;
+  height: 1080px;
+}
+
+/* Ajustement pour les écrans de petite taille (mobiles) */
+@media (max-width: 600px) {
+  .carousel img {
+    width: 100%; /* La largeur occupe 100% de la largeur du conteneur parent */
+    height: auto; /* La hauteur s'ajuste automatiquement pour conserver les proportions */
   }
-  
-  @media (max-width: 600px) {
-    .carousel img {
-      width: 100%;
-      height: auto;
-    }
-  } 
+}

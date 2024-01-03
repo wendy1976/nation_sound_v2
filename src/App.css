@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --white: #FFFFFF;
   --black: #000000;
+  --coral: #e5383b;
   --grey: #E5E5E5;
   --blue: #14213D;
   --orange: #FCA311;
@@ -26,6 +27,8 @@ h1, h2, h3, h4, h5, h6 {
 .white { color: var(--white); }
 .bgWhite { background-color: var(--white); }
 .black { color: var(--black); }
+.coral { color: var(--coral); }
+.bgCoral { background-color: var(--coral); }
 .bgBlack { background-color: var(--black); }
 .grey { color: var(--grey); }
 .bgGrey { background-color: var(--grey); }

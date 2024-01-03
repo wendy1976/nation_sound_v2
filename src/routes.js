@@ -27,7 +27,6 @@ function AppRoutes() {
       <Route path="/billetterie" element={<Billetterie/>} />
       <Route path="/myMap" element={<MyMap />} />
       <Route path="/faqPage" element={<FaqPage />} />
-    
     </Routes>
   );
 }

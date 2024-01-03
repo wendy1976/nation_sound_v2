@@ -12,7 +12,6 @@ import miniCarteImage from './assets/imagesEtLogo/images/minicarte.webp';
 const ArtistCard = lazy(() => import('./ArtistCard'));
 const ServicesSection = React.lazy(() => import('./ServicesSection'));
 
-
 function Accueil() {
   return (
     <div>
@@ -20,17 +19,17 @@ function Accueil() {
       <Header />
 
       {/* Festival Countdown Component */}
-<div className="col-12 d-flex justify-content-center align-items-center mt-5 pt-5">
-  <div className="col-md-4">
-    <Card>
-      <Card.Body>
-        <Card.Title className='fw-bold'>Compte à rebours du Festival</Card.Title>
-        {/* Intégration du composant FestivalCountdown */}
-        <FestivalCountdown />
-      </Card.Body>
-    </Card>
-  </div>
-</div>
+      <div className="col-12 d-flex justify-content-center align-items-center mt-5 pt-5">
+        <div className="col-md-4">
+          <Card>
+            <Card.Body>
+              <Card.Title className='fw-bold'>Compte à rebours du Festival</Card.Title>
+              {/* Intégration du composant FestivalCountdown */}
+              <FestivalCountdown />
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
 
       {/* Carousel Component */}
       <CarouselComponent />
@@ -74,9 +73,9 @@ function Accueil() {
               <Card.Text>
                 Pour avoir toutes les dernières informations, abonnez-vous!
                 <Link to="/newsletter">
-                <button >
-                  S'abonner <MdEmail />
-                </button>
+                  <button>
+                    S'abonner <MdEmail />
+                  </button>
                 </Link>
               </Card.Text>
             </Card.Body>
@@ -85,31 +84,29 @@ function Accueil() {
 
         {/* Interactive Map Section */}
         <div className="col-12 col-md-4 mx-auto">
-  <Card className='bgWhite'>
-    <Card.Body>
-      <Card.Title className='fw-bold'>Carte Interactive</Card.Title>
-      <Card.Text as="div"> {/* Utilisation de as="div" pour éviter l'élément p */}
-        Découvrez le plan du festival sur la carte interactive.
-        <Link to="/myMap">
-          <img
-            src={miniCarteImage}
-            alt="présentation de la carte interactive"
-            style={{
-              width: "400",
-              height: "290",
-              maxWidth: '500',
-              display: 'block',
-              margin: '0 auto',
-              cursor: 'pointer',
-            }}
-          />
-        </Link>
-      </Card.Text>
-    </Card.Body>
-  </Card>
-</div>
-
-        
+          <Card className='bgWhite'>
+            <Card.Body>
+              <Card.Title className='fw-bold'>Carte Interactive</Card.Title>
+              <Card.Text as="div"> {/* Utilisation de as="div" pour éviter l'élément p */}
+                Découvrez le plan du festival sur la carte interactive.
+                <Link to="/myMap">
+                  <img
+                    src={miniCarteImage}
+                    alt="présentation de la carte interactive"
+                    style={{
+                      width: "400",
+                      height: "290",
+                      maxWidth: '500',
+                      display: 'block',
+                      margin: '0 auto',
+                      cursor: 'pointer',
+                    }}
+                  />
+                </Link>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
       </div>
       {/* Fin de la section */}
       
@@ -122,4 +119,5 @@ function Accueil() {
   );
 }
 
-export default Accueil; 
+export default Accueil;
+ 

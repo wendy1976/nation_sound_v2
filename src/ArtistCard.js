@@ -99,7 +99,7 @@ function ArtistCard() {
                   </div>
                 </div>
                 <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}>
-                  <h2 className="pink">{selectedProduct?.name}</h2>
+                  <h2 className="">{selectedProduct?.name}</h2>
                   <img
                     src={selectedProduct?.images[0].src}
                     alt={selectedProduct?.name}

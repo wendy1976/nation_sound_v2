@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   --black: #000000;
   --grey: #E5E5E5;
   --blue: #14213D;
+  --coral: #e5383b;
   --orange: #FCA311;
 }
 
@@ -29,6 +30,8 @@ h1, h2, h3, h4, h5, h6 {
 .bgWhite { background-color: var(--white); }
 .black { color: var(--black); }
 .bgBlack { background-color: var(--black); }
+.coral { color: var(--coral); }
+.bgCoral { background-color: var(--coral); }
 .grey { color: var(--grey); }
 .bgGrey { background-color: var(--grey); }
 .blue { color: var(--blue); }
@@ -85,17 +88,17 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  background-color: #7BDCB5;
+  background-color: var(--white);
 }
 
 body {
   /* Vos styles d'arrière-plan ou autres styles globaux */
-  background-color: #F6F6FF; /* Exemple de couleur d'arrière-plan */  
+  background-color: var(--grey); /* couleur d'arrière-plan */
 }
 
 /* Position de "informations et FAQ" dans le menu de mon header */
 .custom-margin {
-  margin-bottom: -10px; /* Ajustez la valeur en fonction de vos besoins */
+  margin-bottom: -10px;
 }
 
 /* Couleur de mes icônes de réseaux sociaux dans le footer */
@@ -160,7 +163,7 @@ body {
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;
-  color: #1F1F1F;
+  color: var(--black);
   margin-top: 10px;
   transition: background-color 0.3s ease;
   transition: text-decoration 0.3s ease;

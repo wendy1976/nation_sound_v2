@@ -55,7 +55,7 @@ function ContactForm() {
             <div className="contact-form-container pb-5 pt-5 mt-5 mb-3">
                 {/* Afficher un message de remerciement si le formulaire a été soumis */}
                 {formSubmitted ? (
-                    <p>Merci pour votre message! Nous vous répondrons dès que possible.</p>
+                    <p className='coral'>Merci pour votre message! Nous vous répondrons dès que possible.</p>
                 ) : (
                     // Afficher le formulaire si le formulaire n'a pas été soumis
                     <form onSubmit={handleSubmit} className="form">
