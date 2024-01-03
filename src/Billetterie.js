@@ -177,7 +177,7 @@ const Billetterie = () => {
       </div>
 
       {afficherPanier && (
-        <div className='panier me-3'>
+        <div className='panier me-3' style={{ borderRadius: '8px' }}>
           <div className="overlay mt-5" onClick={fermerPanier}></div>
           <div className="">
             {panierValide ? (
@@ -216,7 +216,7 @@ const Billetterie = () => {
         <p className="text-center mb-0 mt-3 pt-0 pb-5">Pour information, ce site étant fictif, vous n'avez pas d'options de paiement, vous validez votre panier, et votre billet de concert se télécharge automatiquement.</p>
         <div className="row">
           {passes.map((pass) => (
-            <div key={pass.id} className="col-md-3 bgWhite border mb-4 p-3 d-flex flex-column">
+            <div key={pass.id} className="col-md-3 bgWhite ms-2 border mb-4 p-3 d-flex flex-column" style={{ borderRadius: '8px' }}>
               <div>
                 <img src={Image} alt="pass" className="img-fluid" style={{ maxWidth: '85%', height: 'auto', display: 'block', margin: '0 auto' }}/>
                 <h3 className='ms-4'>{pass.name}</h3>

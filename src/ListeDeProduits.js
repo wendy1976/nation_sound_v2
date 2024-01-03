@@ -210,7 +210,7 @@ function ListeDeProduits() {
           }
 
           return (
-            <div key={index} className="card">
+            <div key={index} className="card bgWhite">
               <FontAwesomeIcon icon={faMusic} className="music-note pink" />
               <h2 className="pink">{produit.name}</h2>
               <img src={image} alt={produit.name} />
