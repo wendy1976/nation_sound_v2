@@ -6,12 +6,12 @@ const LegalNotice = () => {
   return (
     <Layout>
     <div className='mentions-legales-container'>
-      <h1 className='pink text-center mentions-legales-title'>Mentions Légales</h1>
+      <h1 className='text-center mentions-legales-title'>Mentions Légales</h1>
 
       <h2>Identité</h2>
       <p>
         <strong>Nom du site web :</strong> Nation Sound<br />
-        <strong>Adresse du site :</strong> <a href="https://nationsound.fr">https://nation-sound2.netlify.app/</a><br />
+        <strong>Adresse du site :</strong> <a href="https://nationsound.fr">https://nationsound2.netlify.app/</a><br />
         <strong>Propriétaire :</strong> Caroline FERRU<br />
         <strong>Responsable de publication :</strong> <a href="mailto:caroline.ferru@free.fr">caroline.ferru@free.fr</a><br />
         <strong>Hébergement :</strong> NETLIFY
