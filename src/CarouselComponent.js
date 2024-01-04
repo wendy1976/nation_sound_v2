@@ -22,8 +22,6 @@ const CarouselComponent = memo(function CarouselComponent() {
             className="d-block img-fluid"
             src="/slide1.webp"
             alt="First slide"
-            width="1920"
-            height="1080"
             style={{ visibility: index === 0 ? 'visible' : 'hidden' }}
           />
           <Carousel.Caption>
@@ -37,8 +35,6 @@ const CarouselComponent = memo(function CarouselComponent() {
             className="d-block img-fluid"
             src={require("./assets/imagesEtLogo/images/slide2.webp")}
             alt="Second slide"
-            width="1920"
-            height="1080"
             style={{ visibility: index === 1 ? 'visible' : 'hidden' }}
           />
           <Carousel.Caption>
@@ -50,10 +46,8 @@ const CarouselComponent = memo(function CarouselComponent() {
         <Carousel.Item>
           <img
             className="d-block img-fluid"
-            src={require("./assets/imagesEtLogo/images/slide4.webp")}
-            alt="Fourth slide"
-            width="1920"
-            height="1080"
+            src={require("./assets/imagesEtLogo/images/slide3.webp")}
+            alt="third slide"
             style={{ visibility: index === 2 ? 'visible' : 'hidden' }}
           />
           <Carousel.Caption>
