@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useMediaQuery } from 'react-responsive';
 import Header from './Header';
-
+import './MyMap.css';
 
 // Import des images et icônes
 import barImage from './assets/imagesEtLogo/images/bar1.png';
@@ -34,6 +34,9 @@ const MyMap = () => {
   const mapRef = useRef(null);
   // État pour stocker la catégorie sélectionnée
   const [selectedCategory, setSelectedCategory] = useState(null);
+  
+  // État pour stocker la catégorie active
+  const [activeCategory, setActiveCategory] = useState(null);
 
   // Icônes pour les différentes catégories
   const barIconLeaflet = new L.Icon({
@@ -92,14 +95,18 @@ const MyMap = () => {
     ? locations.filter((location) => location.category === selectedCategory)
     : locations;
 
-  // Gérer le changement de catégorie  
-  const handleCategoryFilter = (category) => {
-    setSelectedCategory((prevCategory) => (prevCategory === category ? null : category));
-  };
+    // Gérer le changement de catégorie
+    const handleCategoryFilter = (category) => {
+      setSelectedCategory((prevCategory) => (prevCategory === category ? null : category));
+      setActiveCategory((prevCategory) => (prevCategory === category ? null : category));
+    };
+  
 
   // Réinitialiser le filtre
-  const resetFilter = () => {
+  const handleResetFilter = () => {
     setSelectedCategory(null);
+    setActiveCategory(null);
+    // Ajoutez d'autres logiques de réinitialisation ici si nécessaire
   };
 
   
@@ -112,42 +119,42 @@ const MyMap = () => {
       <div className="pt-5">
         {isDesktopOrLaptop && (
           <div className="mb-5 mt-5"style={{ display: 'flex', gap: '10px' }}>
-            <button className="d-flex align-items-center" onClick={() => handleCategoryFilter('Scène')}>
+            <button className={`d-flex align-items-center ${activeCategory === 'Scène' ? 'active-filter' : ''}`} onClick={() => handleCategoryFilter('Scène')}>
               <span style={{ display: 'flex', alignItems: 'center' }}>
                 <img src={sceneIcon} alt="Scène" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
                 Scènes
               </span>
             </button>
 
-            <button className="d-flex align-items-center" onClick={() => handleCategoryFilter('Restaurant')}>
+            <button className={`d-flex align-items-center ${activeCategory === 'Restaurant' ? 'active-filter' : ''}`} onClick={() => handleCategoryFilter('Restaurant')}>
               <span style={{ display: 'flex', alignItems: 'center' }}>
                 <img src={restaurantIcon} alt="Restaurant" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
                 Restaurants
               </span>
             </button>
 
-            <button className="d-flex align-items-center" onClick={() => handleCategoryFilter('Bar')}>
+            <button className={`d-flex align-items-center ${activeCategory === 'Bar' ? 'active-filter' : ''}`} onClick={() => handleCategoryFilter('Bar')}>
               <span style={{ display: 'flex', alignItems: 'center' }}>
                 <img src={barIcon} alt="Bar" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
                 Bars
               </span>
             </button>
 
-            <button className="d-flex align-items-center" onClick={() => handleCategoryFilter('wc')}>
+            <button className={`d-flex align-items-center ${activeCategory === 'wc' ? 'active-filter' : ''}`} onClick={() => handleCategoryFilter('wc')}>
               <span style={{ display: 'flex', alignItems: 'center' }}>
                 <img src={wcIcon} alt="WC" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
                 WC
               </span>
             </button>
 
-            <button className="d-flex align-items-center" onClick={() => handleCategoryFilter('Camping')}>
+            <button className={`d-flex align-items-center ${activeCategory === 'Camping' ? 'active-filter' : ''}`} onClick={() => handleCategoryFilter('Camping')}>
               <span style={{ display: 'flex', alignItems: 'center' }}>
                 <img src={campingIcon} alt="Camping" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
                 Camping
               </span>
             </button>
 
-            <button className="d-flex align-items-center" onClick={resetFilter}>
+            <button className="d-flex align-items-center" onClick={handleResetFilter}>
               Réinitialiser le filtre
             </button>
           </div>
@@ -169,7 +176,7 @@ const MyMap = () => {
                 </select>
                 {/* Bouton pour réinitialiser le filtre */}
                 <div>
-                  <button className="btn d-inline-block" onClick={resetFilter}>
+                  <button className="btn d-inline-block" onClick={handleResetFilter}>
                     Réinitialiser le filtre
                   </button>
                 </div>
