@@ -17,9 +17,9 @@ function ArtistCard() {
 
   useEffect(() => {
     if (produits.length === 0) {
-      const url = new URL('https://promptia.fr/wp-json/wc/v3/products?_embed');
-      url.searchParams.append('consumer_key', 'ck_e2c7c141b576494392f0d84d83daa63d792b71ff');
-      url.searchParams.append('consumer_secret', 'cs_b5f92310248c73aaf7a70782cbb32ed19b761c0e');
+      const url = new URL('https://nationsound.fr//wp-json/wc/v3/products?_embed');
+      url.searchParams.append('consumer_key', 'ck_ababe02034847184279c83aa93edfd56d71e96f7');
+      url.searchParams.append('consumer_secret', 'cs_89fd1c87f49fbb998b821b009ac93c93b42419cc');
       url.searchParams.append('per_page', 100);
       url.searchParams.append('page', 1);
 
@@ -35,13 +35,7 @@ function ArtistCard() {
     }
   }, [produits]);
 
-  const isWebPSupported = () => {
-    const elem = document.createElement('canvas');
-    if (!!(elem.getContext && elem.getContext('2d'))) {
-      return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-    }
-    return false;
-  };
+  
 
   return (
     <div className="cards-container">
@@ -52,10 +46,6 @@ function ArtistCard() {
           }
 
           const image = produit.images.length > 0 ? produit.images[0].src : '';
-          const imageUrlWebP = `${image}.webp`;
-
-          const supportsWebP = isWebPSupported();
-          const imageUrlToDisplay = supportsWebP ? imageUrlWebP : image;
 
           const customStyles = {
             overlay: {
@@ -84,13 +74,13 @@ function ArtistCard() {
               <div className="artist-card bgWhite p-4 rounded-3 shadow-lg d-flex flex-column " style={{ border: '1px solid #ccc', height: '100%' }}>
                 <div className="row">
                   <div className="col-12 col-md-5">
-                    <img
-                      src={imageUrlToDisplay}
-                      alt={produit.name}
-                      className="img-fluid"
-                      width="300"
-                      height="200"
-                    />
+                  <img
+                    src={image}
+                    alt={produit.name}
+                    className="img-fluid"
+                    width="300"
+                    height="200"
+                  />
                   </div>
                   <div className="col-12 col-md-7">
                     <h3 className='blue'>{produit.name}</h3>

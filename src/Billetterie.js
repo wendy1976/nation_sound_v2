@@ -19,9 +19,9 @@ const Billetterie = () => {
   useEffect(() => {
     // Fonction fetchData pour récupérer les données des produits
     const fetchData = async () => {
-      const url = new URL('https://promptia.fr/wp-json/wc/v3/products?_embed');
-      url.searchParams.append('consumer_key', 'ck_e2c7c141b576494392f0d84d83daa63d792b71ff');
-      url.searchParams.append('consumer_secret', 'cs_b5f92310248c73aaf7a70782cbb32ed19b761c0e');
+      const url = new URL('https://nationsound.fr//wp-json/wc/v3/products?_embed');
+      url.searchParams.append('consumer_key', 'ck_ababe02034847184279c83aa93edfd56d71e96f7');
+      url.searchParams.append('consumer_secret', 'cs_89fd1c87f49fbb998b821b009ac93c93b42419cc');
       url.searchParams.append('per_page', 100);
       url.searchParams.append('page', 1);
 
