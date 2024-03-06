@@ -6,15 +6,21 @@ function Faq() {
     const [faqs, setFaqs] = useState([
         {
             question: 'Où dormir ?',
-            answer: 'Nous vous proposons de planter votre tente sur le Camping du Festival, ou de loger dans les hôtels aux alentours, toutes les informations sont sur notre rubrique : <a href="infos#section2">Logement</a>.'
+            answer: 'Nous vous proposons de planter votre tente sur le Camping du Festival, ou de loger dans les hôtels aux alentours, toutes les informations sont sur notre rubrique:',
+            link: '/infos#section2',
+            linkText: 'Logement'
         },
         {
             question: 'Comment venir ?',
-            answer: 'Toutes les informations concernant les transports se trouvent dans la rubrique : <a href="infos#section1">Transport</a>.'
+            answer: 'Toutes les informations concernant les transports se trouvent dans la rubrique:',
+            link: '/infos#section1',
+            linkText: 'Transports'
         },
         {
             question: 'Où manger ?',
-            answer: 'Nous vous proposons au sein du festival plusieurs points de restauration, que vous trouverez dans notre rubrique : <a href="infos#section3">Restauration</a>.'
+            answer: 'Nous vous proposons au sein du festival plusieurs points de restauration, que vous trouverez dans notre rubrique:',
+            link: '/infos/restauration-bar#section3',
+            linkText: 'Restauration'
         },
         {
             question: 'Comment payer dans l’enceinte du festival ?',
@@ -35,7 +41,6 @@ function Faq() {
             question: 'Les enfants sont-ils autorisés ?',
             answer: '🚫 Les enfants <strong>de moins de 5 ans</strong> ne sont pas autorisés dans l’enceinte du festival, et ceux de moins de 12 ans déconseillés.'
         },
-
         {
             question: 'Puis-je apporter de la nourriture ?',
             answer: 'Seuls les petits en-cas, les bouteilles en plastique transparentes et les gourdes sont autorisés. Pour des raisons de sécurité, les bouteilles en verre sont évidemment interdites, tout comme les aérosols et les brumisateurs.'
@@ -48,13 +53,11 @@ function Faq() {
             question: 'Les appareils photos et les caméras sont-ils autorisés ?',
             answer: '🚫<strong>Non</strong>, les caméras, go-pros, selfies sticks et appareils de type reflex ne sont pas autorisés dans l’enceinte du festival.'
         },
-
         {
             question: 'Les animaux sont-ils autorisés ?',
             answer: '🚫<strong>Non</strong>, les animaux ne sont pas autorisés dans l’enceinte du festival.'
                 
         },
-
         {
             question: 'Puis-je apporter un siège ?',
             answer: '🚫<strong>Non</strong>, pour des raisons de sécurité les sièges, même pliables sont interdits (autorisés dans l’enceinte du camping)'
