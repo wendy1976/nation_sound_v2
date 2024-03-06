@@ -22,7 +22,7 @@ const Partners = () => {
   return (
     <Layout>
       <div className="partners-section">
-        <h1 className="text-center pink mb-0 mt-3 pt-0 pb-5">Nos Partenaires</h1>
+        <h1 className="text-center partner mb-0 mt-5 pt-5 pb-5">Nos Partenaires</h1>
         <h2 className='text-center pink mb-5'>Merci à tous nos partenaires pour leur soutien et leur collaboration.</h2>
         <div className="row bgWhite">
           {partnerLogos.map((logo, index) => (

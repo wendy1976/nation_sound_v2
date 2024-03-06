@@ -12,8 +12,8 @@ function Concerts() {
   return (
     <div>
       <Header />
-        <h1 className="text-center mb-0 mt-3 pt-0 pb-5 boutique">LES CONCERTS & LA PROGRAMMATION</h1>
-        <h2 className="text-center mb-0 mt-3 pt-0 pb-5 boutique">Le festival Nation Sound aura lieu les 21, 22 et 23 Juin 2024</h2>   
+        <h1 className="text-center mb-0 mt-5 pt-5 pb-1 boutique">Concerts & Programmation</h1>
+        <h2 className="text-center mb-0 mt-0 pt-0 pb-5 boutique">Le festival Nation Sound aura lieu les 21, 22 et 23 Juin 2024!</h2>   
         <ListeDeProduits />
       <Footer />
       <ScrollToTopButton />

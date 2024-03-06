@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 .bgBlue { background-color: var(--blue); }
 .orange { color: var(--orange); }
 .bgOrange { background-color: var(--orange); }
+.coral { color: var(--coral); }
 
 
 
@@ -88,6 +89,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   background-color: #7BDCB5;
 }
+/* marge pour le titre de ma page concert et programmation */
+.boutique,h1 {
+  margin-top: 80px !important;
+}
 
 body {
   /* Vos styles d'arrière-plan ou autres styles globaux */
@@ -131,6 +136,10 @@ body {
 }
 
 /* Mise en forme de la FAQ */
+.faq,h1 {
+  margin-top: 80px !important;
+}
+
 .faq-item {
   max-width: 70%;
   margin: 0 auto;
@@ -241,7 +250,7 @@ button:hover {
 }
 
 .mentions-legales-title {
-  margin-bottom: 30px;
+  margin-bottom: 30px;  
 }
 
 /* Mise en forme de la page billetterie */
@@ -296,4 +305,9 @@ button:hover {
   margin-left: auto;
   display: flex;
   align-items: center;
+}
+
+/* position de mon titre de la page partenaires */
+.partner,h1 {
+  margin-top: 80px !important;
 }
